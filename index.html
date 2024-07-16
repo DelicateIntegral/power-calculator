@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Power Calculator by DelicateIntegral" />
+    <meta name="author" content="DelicateIntegral" />
+    <meta
+      name="keywords"
+      content="CYOA, Interactive CYOA, DelicateIntegral, Calculator, Power, Power Calculator"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Power Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body data-theme="light">
+    <div class="container">
+      <h1>Power Calculator</h1>
+      <button id="themeToggle" onclick="toggleTheme()">
+        Switch to Dark Theme
+      </button>
+      <p>This Scale considers my power scale:</p>
+      <p>
+        0PP: You<br />
+        <br />
+        1PP: Peak Human<br />
+        <br />
+        100PP: Universal Level
+      </p>
+      <p>
+        This is initial power expression.<br />
+        All powers have potential to grow exponentially every year with the rate
+        of 1PP worth of growth per year if you use it regularly and practice
+        daily. This means that if you have initial power costing 25PP, after 1
+        year, it will be 26PP.<br />
+        You can enter value greater than 100 up to 1000000 for the purpose of
+        calculating power growth. Example: 125 value will tell you how stronger
+        your 75 PP power would be after 50 years.
+      </p>
+      <div class="calculator-section">
+        <h2>Power Calculator</h2>
+        <label for="iteration">Enter Cost of your power:</label>
+        <input
+          type="number"
+          id="cost"
+          name="cost"
+          min="0"
+          max="100"
+          value="0"
+        />
+        <button onclick="powerStrength()">Calculate</button>
+        <div class="result">
+          <p id="power-strength"></p>
+        </div>
+        <label for="iteration">Enter value of Power Points:</label>
+        <input
+          type="number"
+          id="iteration"
+          name="iteration"
+          min="0"
+          max="1000000"
+          value="0"
+        />
+        <button onclick="calculatePower()">Calculate</button>
+        <div class="result">
+          <p id="relative-strength"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
